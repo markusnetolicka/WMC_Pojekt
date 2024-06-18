@@ -1,0 +1,117 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+#game{
+  width: 400px;
+  height: 500px;
+  border: 1px solid black;
+  margin: auto;
+  overflow: hidden;
+}
+#block{
+  width: 50px;
+  height: 500px;
+  background-color: #23232a;
+  position: relative;
+  left: 400px;
+  animation: block 2s infinite linear;
+}
+@keyframes block {
+  0%{left:400px}
+  100%{left: -50px}
+}
+#hole{
+  width: 50px;
+  height: 150px;
+  background-color: white;
+  position: relative;
+  left: 400px;
+  top: -500px;
+  animation: block 2s infinite linear;
+}
+#character{
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  position: absolute;
+  top: 100px;
+  border-radius: 50%;
+}
+h1{
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  font-family: "Roboto Light",sans-serif;
+}
+#score{
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  font-family: "Roboto Light",sans-serif;
+}
+#gameOverScreen{
+  position: absolute;
+  top: 0;
+  left: 0;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+}
+#gameOverScreen{
+  display: none;
+  flex-direction: column;
+}
+#finalScore{
+  font-size: 2rem;
+  font-family: "Roboto Light",sans-serif;
+}
+#gameOverScreen button{
+  margin-top: 5px;
+  border: none;
+  background:none;
+  cursor: pointer;
+  height: 50px;
+  font-size: 2rem;
+  font-family: "Roboto Light",sans-serif;
+}
+#startScreen{
+  position: absolute;
+  top: 0;
+  left: 0;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+}
+#startScreen {
+  display: flex;
+  flex-direction: column; /* Added to arrange items vertically */
+}
+#startScreen button {
+  margin-top: 20px; /* Added to add space between title and button */
+  font-family: "Roboto Light",sans-serif;
+  font-size: 2rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  height: 50px;
+}
+#startScreen button:hover{
+  background: black;
+  color: white;
+  transition: 0.8s;
+  border-radius: 10px;
+}
+#gameOverScreen button:hover{
+  background: black;
+  color: white;
+  transition: 0.8s;
+  border-radius: 10px;
+}
